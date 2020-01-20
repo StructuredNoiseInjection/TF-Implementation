@@ -17,4 +17,13 @@ python pretrained_SNI.py
 This will generate two unique faces, and multiple figure showing specific modifications while maintaining the face identity.
 Any cell of the noise grid can be changed individually by providing a 1/0 mask to the function ``` randomize_specific_local_codes ``` as demonstrated in the example file.
 
-![GitHub Logo](/images/logo.png)
+Changing the globally-shared code entry (affects pose)
+![GlobalCodeExamples](/example_fakes_global.png)
+Changing the codes that are shared by region (affects mid-level features such as age and accessories)
+![SharedCodeExamples](/example_fakes_shared.png)
+Changing all local codes (changing the fine details of the face)
+![localCodeExamples](/example_fakes_alllocal.png)
+Changing specific local codes (2x2 cells around the mouth)
+![mouthCodeExamples](/example_fakes_mouth.png)
+Changing specific local codes (3x7 cells covering the top of the head)
+![hairCodeExamples](/example_fakes_hair.png)
