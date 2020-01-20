@@ -26,7 +26,7 @@ Changing the codes that are shared by region (affects mid-level features such as
 Changing all local codes (changing the fine details of the face)
 ![localCodeExamples](/example_fakes_alllocal.png)
 
-Changing specific local codes (2x2 cells around the mouth)
+Changing specific local codes (4x4 cells around the mouth)
 ![mouthCodeExamples](/example_fakes_mouth.png)
 
 Changing specific local codes (3x7 cells covering the top of the head)
