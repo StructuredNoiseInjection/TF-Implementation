@@ -19,11 +19,18 @@ Any cell of the noise grid can be changed individually by providing a 1/0 mask t
 
 Changing the globally-shared code entry (affects pose)
 ![GlobalCodeExamples](/example_fakes_global.png)
+
 Changing the codes that are shared by region (affects mid-level features such as age and accessories)
 ![SharedCodeExamples](/example_fakes_shared.png)
+
 Changing all local codes (changing the fine details of the face)
 ![localCodeExamples](/example_fakes_alllocal.png)
+
 Changing specific local codes (2x2 cells around the mouth)
 ![mouthCodeExamples](/example_fakes_mouth.png)
+
 Changing specific local codes (3x7 cells covering the top of the head)
 ![hairCodeExamples](/example_fakes_hair.png)
+
+# Training a network from scratch
+The network can be trained similarly to training the original StyleGAN but with a different mapping function. A
