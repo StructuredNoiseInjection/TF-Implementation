@@ -23,7 +23,7 @@ Changing the globally-shared code entry (affects pose)
 Changing the codes that are shared by region (affects mid-level features such as age and accessories)
 ![SharedCodeExamples](/example_fakes_shared.png)
 
-Changing all local codes (changing the fine details of the face)
+Changing all local codes (affects the fine details of the face)
 ![localCodeExamples](/example_fakes_alllocal.png)
 
 Changing specific local codes (4x4 cells around the mouth)
