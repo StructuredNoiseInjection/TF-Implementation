@@ -2,9 +2,9 @@
 A TensorFlow implementation of structured noise injection as described in the CVPR2020 submission. We adapt the original StyleGAN architecture from https://github.com/NVlabs/stylegan.
 
 The code allows:
-1.  Disentangled editing of generated images (local features, mid-scale features, pose, and overall style)
-1.  Training a model with structured noise injection on any dataset
-1.  Modifying the paper's choices of grid dimensions, local code length, shared code length, and global code length 
+-  Disentangled editing of generated images (local features, mid-scale features, pose, and overall style)
+-  Training a model with structured noise injection on any dataset
+-  Modifying the paper's choices of grid dimensions, local code length, shared code length, and global code length 
 
 
 # Examining a pretrained network
@@ -33,4 +33,12 @@ Changing specific local codes (3x7 cells covering the top of the head)
 ![hairCodeExamples](/example_fakes_hair.png)
 
 # Training a network from scratch
-The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```
+The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
+
+To run training on the FFHQ datasets with the default settings:
+``` python3 train.py ```
+
+
+# Testing new settings of structured noise injection
+TODO
+
