@@ -39,11 +39,18 @@ To run training on the FFHQ datasets with the default settings:
 ``` python3 train.py ```
 
 The expected performance of a trained network:
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
+
+| Metric  | Score |
+| ------------- | ------------- |
+| fid50k  | 6.22  |
+| ppl_zfull  | 354.07  |
+| ppl_wfull  | 175.82  |
+| ppl_zend  | Content Cell  |
+| ppl_wend  | Content Cell  |
+| ls_z  | 50.68 |
+| ls_w  | 1.0012  |
+
 
 
 # Testing new settings of structured noise injection
