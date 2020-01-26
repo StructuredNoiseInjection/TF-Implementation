@@ -1,5 +1,5 @@
 # Structured Noise Injection (Official TensorFlow implementation)
-A TensorFlow implementation of structured noise injection as described in the CVPR2020 submission. We adapt the original StyleGAN architecture from https://github.com/NVlabs/stylegan.
+A TensorFlow implementation of structured noise injection as described in the paper. We adapt the original StyleGAN architecture code from https://github.com/NVlabs/stylegan.
 
 The code allows:
 -  Disentangled editing of generated images (local features, mid-scale features, pose, and overall style)
@@ -37,6 +37,13 @@ The network can be trained similarly to training the original StyleGAN but with 
 
 To run training on the FFHQ datasets with the default settings:
 ``` python3 train.py ```
+
+The expected performance of a trained network:
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 # Testing new settings of structured noise injection
