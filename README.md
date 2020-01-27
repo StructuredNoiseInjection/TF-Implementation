@@ -46,10 +46,10 @@ The expected performance of a trained network:
 | fid50k  | 6.22  |
 | ppl_zfull  | 354.07  |
 | ppl_wfull  | 175.82  |
-| ppl_zend  | Content Cell  |
-| ppl_wend  | Content Cell  |
-| ls_z  | 50.68 |
-| ls_w  | 1.0012  |
+| ppl_zend  | 352.87  |
+| ppl_wend  | 127.01  |
+| ls_z  | 83.53 |
+| ls_w  | 1.0018  |
 
 
 
