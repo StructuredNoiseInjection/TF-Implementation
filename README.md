@@ -1,4 +1,4 @@
-# Structured Noise Injection (Official TensorFlow implementation)
+# Structured Noise Injection (Official TensorFlow Implementation)
 A TensorFlow implementation of structured noise injection as described in the paper. We adapt the original StyleGAN architecture code from https://github.com/NVlabs/stylegan.
 
 The code allows:
