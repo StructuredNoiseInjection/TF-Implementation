@@ -33,14 +33,15 @@ Changing specific local codes (3x7 cells covering the top of the head)
 ![hairCodeExamples](/example_fakes_hair.png)
 
 # Training a network from scratch
-Please refer to https://github.com/NVlabs/stylegan for the datasets.
 
-If you're already familiar with training StyleGAN, you can simply copy ``` training/networks_structurednoiseinjection.py ``` to your StyleGAN folder training folder. Replace the generator on line 25 in ``` train.py ``` to ``` training.networks_structurednoiseinjection.G_style ```
+If you have trained StyleGAN before, you can simply copy ``` training/networks_structurednoiseinjection.py ``` to your StyleGAN training folder. Replace the generator on line 25 in ``` train.py ``` to ``` training.networks_structurednoiseinjection.G_style ``` and run training.
 
-The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
+Otherwise, you can use the code provided here. The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
 
 To run training on the FFHQ datasets with the default settings:
 ``` python3 train.py ```
+
+Please refer to https://github.com/NVlabs/stylegan for the datasets ande code requirements.
 
 The expected performance of a trained network:
 
@@ -58,5 +59,13 @@ The expected performance of a trained network:
 
 
 # Testing new settings of structured noise injection
-TODO
+## Changing cell resolution / changing when to beging style modulation
+This can be done in the synthesis part. 
+In order to change where to begin style modulation the ```layer_epilogue``` function can be edited. Please note that each resolution contains two style modulation layers.
+It is difficult to change cell resolution above 8x8 currently since it loses the benefits of progressive growing and lower resolution information. Be default, the 8x8 resolution is used as in the paper.
+
+## Changing global/shared/local code length
+This can be done in the mapping function. The user can feed random codes that are arranged in a certain way, but the user must specify how to assemble the final code for each grid cell given the random codes. If the code lengths or arrangement are changed, the ```my_randoms``` in ```training/misc.py``` should be updated to chech the changes during training.
+
+
 
