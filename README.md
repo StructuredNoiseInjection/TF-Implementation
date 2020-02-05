@@ -35,7 +35,7 @@ Changing specific local codes (3x7 cells covering the top of the head)
 # Training a network from scratch
 The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
 
-If you have trained StyleGAN before, you can simply copy ``` training/networks_structurednoiseinjection.py ``` to your StyleGAN training folder. Replace the generator (line 25) in ``` train.py ``` to ``` training.networks_structurednoiseinjection.G_style ``` and run training.
+If you have trained StyleGAN before, you can simply copy ``` training/networks_structurednoiseinjection.py ``` to your StyleGAN training folder. Replace the generator (line 25) in ``` train.py ``` to ``` training.networks_structurednoiseinjection.G_SNI ``` and run training.
 
 Otherwise, you can use the code provided here. 
 
