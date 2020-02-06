@@ -439,15 +439,19 @@ def G_mapping(
             x1_out = act(x1_out)
     mappedStyleCode = x1_out
         
-    
     #Final code assembly. This must be modified when changing the length/arrangement of global/shared/local codes
     globalCode, sharedCodes, unusuedEntries, localCodes = tf.split(spatiallyVariableCode, [1, 2*2, 3, 8*8*16], axis=1)
 
     tiledGlobalCode = tf.reshape(tf.tile(globalCode, [1, 8*8]), [-1, 8, 8, 1])
-    resizedSharedCodes = upscale2d(upscale2d(tf.reshape(sharedCodes, [-1, 1, 2, 2]))) #Nearest-neighbor resize to distribute codes to local regions
+    print(sharedCodes)
+    resizedSharedCodes = tf.image.resize_nearest_neighbor(tf.reshape(sharedCodes, [-1, 2, 2, 1]), [8,8]) #Nearest-neighbor resize to distribute codes to local regions
+    print(resizedSharedCodes)
+
     resizedSharedCodes = tf.reshape(resizedSharedCodes, [-1, 8, 8, 1])
     localCodes = tf.reshape(localCodes, [-1, 8, 8, 16])
     
+    print(globalCode.get_shape())
+
     structuredCodes = tf.concat([tiledGlobalCode, resizedSharedCodes, localCodes], axis=3)
     structuredCodeLength = 16+1+1 #local size + shared size + global size
     
