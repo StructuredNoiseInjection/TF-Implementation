@@ -44,19 +44,6 @@ To run training on the FFHQ datasets with the default settings:
 
 Please refer to https://github.com/NVlabs/stylegan for the datasets and code requirements.
 
-The expected performance of a trained network:
-
-
-| Metric  | Score |
-| ------------- | ------------- |
-| fid50k  | 6.22  |
-| ppl_zfull  | 354.07  |
-| ppl_wfull  | 175.82  |
-| ppl_zend  | 352.87  |
-| ppl_wend  | 127.01  |
-| ls_z  | 83.53 |
-| ls_w  | 1.0018  |
-
 
 
 # Testing new settings of structured noise injection
