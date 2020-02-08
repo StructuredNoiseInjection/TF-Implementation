@@ -37,14 +37,10 @@ Changing specific local codes (3x7 cells covering the top of the head)
 ![hairCodeExamples](/example_fakes_hair.png)
 
 # Training a network from scratch
-The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
-
-If you have trained StyleGAN before, you can simply copy ``` training/networks_structurednoiseinjection.py ``` to your StyleGAN training folder. Replace the generator (line 25) in ``` train.py ``` to ``` training.networks_structurednoiseinjection.G_SNI ``` and run training.
-
-Otherwise, you can use the code provided here. 
-
 To run training on the FFHQ datasets with the default settings:
 ``` python3 train.py ```
+
+The network can be trained similarly to training the original StyleGAN but with a different generator. The code for our generator is included under ``` training/networks_structurednoiseinjection.py ```.
 
 Please refer to https://github.com/NVlabs/stylegan for the datasets and code requirements.
 
