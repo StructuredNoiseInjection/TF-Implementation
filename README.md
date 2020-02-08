@@ -10,6 +10,10 @@ The code allows:
 # Examining a pretrained network
 We follow the same approach as the original StyleGAN code.
 
+First, download the pretrained network from:
+https://drive.google.com/file/d/1jxzRnLX2OhPos4E1pqz-7ed4mqVyLwoQ/view?usp=sharing
+and place it in the same folder as ```pretrained_SNI.py```
+
 In order to randomly generate a few images, and preview the changes possible by our method:
 ```
 python pretrained_SNI.py
