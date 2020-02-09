@@ -50,7 +50,7 @@ Please refer to https://github.com/NVlabs/stylegan for the datasets and code req
 ## Changing cell resolution / changing when to beging style modulation
 This can be done in the synthesis part. 
 In order to change where to begin style modulation the ```layer_epilogue``` function can be edited. Please note that each resolution contains two style modulation layers.
-It is difficult to change cell resolution above 8x8 currently since it loses the benefits of progressive growing and lower resolution information. Be default, the 8x8 resolution is used as in the paper.
+It is difficult to change cell resolution above 8x8 currently since it loses the benefits of progressive growing and lower resolution information. By default, the 8x8 resolution is used as in the paper.
 
 ## Changing global/shared/local code length
 This can be done in the mapping function. The user can feed random codes that are arranged in a certain way, but the user must specify how to assemble the final code for each grid cell given the random codes. If the code lengths or arrangement are changed, the ```my_randoms``` in ```training/misc.py``` should be updated to chech the changes during training.
