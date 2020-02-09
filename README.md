@@ -16,7 +16,7 @@ and place it in the same folder as ```pretrained_SNI.py```
 
 In order to randomly generate a few images, and preview the changes possible by our method:
 ```
-python pretrained_SNI.py
+python3 pretrained_SNI.py
 ```
 This will generate two unique faces, and multiple figure showing specific modifications while maintaining the face identity.
 Any cell of the noise grid can be changed individually by providing an 8x8 binary mask to the function ``` randomize_specific_local_codes ``` as demonstrated in the example file.
