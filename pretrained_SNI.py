@@ -35,37 +35,37 @@ def main():
 
     
     number_unique_faces = 2 #They appear on rows of the generated figure
-    variations_per_face = 3 #They appear on columns of the generated figure
+    variations_per_face = 5 #They appear on columns of the generated figure
 
     # Pick latent vector.
-    #rnd = np.random.RandomState(31)
+    #rnd = np.random.RandomState(2)
     #latents = rnd.randn(number_unique_faces, Gs.input_shape[1])
 
     latents = np.random.randn(number_unique_faces, Gs.input_shape[1])
 
     grid_latents = misc.randomize_global_codes(latents, variations_per_face)
-    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7,is_validation=True)
+    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7)
     misc.save_image_grid(grid_fakes, 'example_fakes_global.png', drange=[-1,1], grid_size=(variations_per_face,number_unique_faces))
     
     
     grid_latents = misc.randomize_global_shared_codes(latents, variations_per_face)
-    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7,is_validation=True)
+    grid_fakes = Gs.run(grid_latents, None, truncation_psi=0.7)
     misc.save_image_grid(grid_fakes, 'example_fakes_shared.png', drange=[-1,1], grid_size=(variations_per_face,number_unique_faces))
 
     grid_latents = misc.randomize_all_local_codes(latents, variations_per_face)
-    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7,is_validation=True)
+    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7)
     misc.save_image_grid(grid_fakes, 'example_fakes_alllocal.png', drange=[-1,1], grid_size=(variations_per_face,number_unique_faces))    
     
     mask = np.zeros( shape=(8,8,1))
     mask[4:8, 2:6] = 1 
     grid_latents = misc.randomize_specific_local_codes(latents, mask, variations_per_face)
-    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7,is_validation=True  )
+    grid_fakes = Gs.run(grid_latents, None, truncation_psi=0.7)
     misc.save_image_grid(grid_fakes, 'example_fakes_mouth.png', drange=[-1,1], grid_size=(variations_per_face,number_unique_faces)) 
     
     mask = np.zeros( shape=(8,8,1))
     mask[0:3, 1:7] = 1 
     grid_latents = misc.randomize_specific_local_codes(latents, mask, variations_per_face)
-    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7,is_validation=True  )
+    grid_fakes = Gs.run(grid_latents, None,  truncation_psi=0.7)
     misc.save_image_grid(grid_fakes, 'example_fakes_hair.png', drange=[-1,1], grid_size=(variations_per_face,number_unique_faces)) 
 
 
